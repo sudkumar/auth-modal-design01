@@ -1,0 +1,48 @@
+.group-check{
+	position: relative;
+	label{
+		vertical-align: middle;
+	}
+
+	&__input{
+		display: none;
+
+		+ label{
+			&:before{
+				transform: scale(0);
+			}
+			
+		}
+		&:checked + label{
+			&:before{
+				transform: scale(1);
+			}
+				
+		}
+	}
+
+	&__placeholder{
+		margin-right: 5px;	
+		color: #3AA9E3;
+		&:before, &:after{
+			position: absolute;
+			transition: all linear .15s;
+			font-size: 18px;
+			top: 0;
+			left: 0;
+		}
+
+		&:before{
+			content: "\f058";
+		}
+		
+		&:after{
+			content: "\f1db";
+		}
+
+	}
+
+	&__label{
+		margin-left: 15px;
+	}
+}

@@ -1,0 +1,24 @@
+
+*{
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	min-height: 100vh;
+	background: {
+		image: url('./../img/back.jpg');
+		position: top center;
+		size: cover;
+		repeat: no-repeat;
+	}
+	font-family: 'Roboto', sans-serif;
+}
+
+@import "button";
+@import "input-groups";
+
+@import 'modal';
+@import 'form';
+
+

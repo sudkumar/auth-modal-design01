@@ -1,0 +1,90 @@
+.auth{
+	color: dimgray;
+	max-width: 300px;
+	padding: 10px;
+	margin: 0px auto;
+
+	fieldset{
+		border: none;
+		margin-bottom: 20px;
+
+		&.remember-forgot{
+			// make font-size to zero to remove the space error
+			font-size: 0px;
+
+			.remember, .forgot{
+				// reset the font size
+				display: inline-block;
+				width: 50%;
+				font-size: 12px;
+			}
+			.forgot{
+				text-align: right;
+				a{
+					color: #3AA9E3;
+					text-decoration: none;
+					font-weight: 100;
+				}
+			}
+
+		}
+	}
+	.group input{
+		width: 100%;
+		padding: 10px 20px;
+		background: transparent;
+		outline: none;
+		border-radius: 50px;
+		border: 1px solid silver;
+		color: dimgray;
+		transition: all linear .15s;
+		&:focus{
+			border-color: #3AA9E3;
+		}
+	}
+	
+	.submit{
+		width: 100%;
+		padding: 10px 20px;
+		border-radius: 50px;
+		background: #3AA9E3;
+		color: white;
+		text-transform: uppercase;
+		font-weight: 600;
+		box-shadow: 0 3px 10px fade-out(#3AA9E3, .4)
+	}
+
+	.other-options{
+		margin: 10px auto 5px;
+		font-size: 0px;
+		p{
+			text-align: center;
+			font-size: 12px;
+		}
+
+		.option{
+			display: inline-block;
+			width: (100%)/3;
+			text-align: center;
+			margin-top: 10px;
+			.btn{
+				color: dimgray;
+				background: white;
+				border: 1px solid fade-out(black, .9);
+				padding: 5px 15px;
+				line-height: 16px;
+				font-size: 14px;
+				border-radius: 50px;
+				transition: all linear .15s;
+				&:hover{
+					background: gold;
+					color: white;
+					border: none;
+					box-shadow: 2px 2px 5px fade-out(black, .9)
+				}
+
+			}
+
+		}
+	}
+}

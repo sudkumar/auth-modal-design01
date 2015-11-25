@@ -1,0 +1,24 @@
+.btn{
+	outline: none;
+	cursor: pointer;
+	border: none;
+	border-radius: 3px;
+}
+.close{
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	font-size: 14px;
+	background: white;
+	border: none;
+	box-shadow: 0 0 1px 2px fade-out(gray, .9);
+	border-radius: 50%;
+	color: dimgray;
+	cursor: pointer;
+	outline: none;
+	transition: all linear .15s;
+	&:hover{
+		box-shadow: 0 0 1px 2px fade-out(gray, .8);
+	}
+}
