@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Auth Modal Design</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+	<div class="modal">
+		<div class="modal__wrapper">
+			<div class="modal__container">
+				<div class="modal__header">
+					<h2>
+						Login
+					</h2>
+					<button class="close"><i class="fa fa-close"></i></button>
+				</div>
+				<div class="modal__body">
+					<div class="auth">
+						<form  class="login-form">
+							<fieldset class="group">
+								<!-- <label for="email">Email</label> -->
+								<input type="email" id="email" placeholder="Email">
+							</fieldset>
+							<fieldset class="group">
+								<!-- <label for="password">Password</label> -->
+								<input type="password" id="password" placeholder="Password">
+							</fieldset>
+							<fieldset class="remember-forgot">
+								<div class="remember group-check">
+									<input type="checkbox" id="remember" class="group-check__input">
+									<label for="remember" class="group-check__placeholder fa"></label>
+									<label for="remember" class="group-check__label">Remember me</label>
+								</div>
+								<div class="forgot">
+									<a href="#">Forgot Password?</a>
+								</div>
+							</fieldset>
+							<fieldset>
+								<button class="btn submit" type="submit">Login</button>
+							</fieldset>
+						</form>
+						<div class="other-options">
+							<p>Or use your social network</p>
+							<div class="options">
+								<div class="option">
+									<button class="btn" type="button"><i class="fa fa-facebook"></i></button>
+								</div>
+								<div class="option">
+									<button class="btn" type="button"><i class="fa fa-google-plus"></i></button>
+								</div>
+								<div class="option">
+									<button class="btn" type="button"><i class="fa fa-linkedin"></i></button>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div class="modal__footer">
+					<div class="signup-optino">Don't have account? No worries. Easy <a href="#">Sign Up</a> </div>					
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
