@@ -5,6 +5,13 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
+var del = require('del');
+
+// global config variables
+
+var copyAtBuild = ['./app/**/*'];
+var removeAtBuild = ['./build/sass', './app/css'];
+
 
 // server + watch  
 gulp.task('serve', ['sass'], function(){
@@ -35,3 +42,25 @@ gulp.task('sass', function(){
 
 // Create the default tasks
 gulp.task('default', ['serve']);
+
+
+
+// create the build task
+gulp.task('build:before', ['sass']);
+
+gulp.task('build:clean', function(cb){
+		return del([
+			"./build"
+			], cb);
+	});
+
+gulp.task('build:copy', ['build:clean', 'build:before'], function(){
+	return gulp.src(copyAtBuild)
+	.pipe(gulp.dest('./build/'));
+	});
+
+gulp.task('build:remove', ['build:copy'], function(cb){
+	return del( removeAtBuild, cb);
+	});
+
+gulp.task('build', ['build:copy', 'build:remove']);
